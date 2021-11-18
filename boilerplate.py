@@ -9,7 +9,8 @@ __version__ = "1.0.0"
 import argparse
 
 def main(args):
-    print("Reading from ", args.input_path)
+    if args.verbose > 0:
+        print("Reading from ", args.input_path)
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="This script does nothing.")
     parser.add_argument("--input_path", help="Input txt file path with data about nothing.", default="input_file.txt")
